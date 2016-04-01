@@ -1,0 +1,143 @@
+<resources>
+    <!--
+         目录
+      注：编写常用的规则：字体：sp_value_数值  dp单位：dp_value_数值
+          其他规则：dp_
+      0.主APP需求尺寸
+        0.1常用的sp的值
+        0.2常用的dp的值
+      1.MainActivity需求尺寸
+  -->
+    <!--主APP需求尺寸开始 -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--常用的sp的值开始-->
+    <dimen name="sp_value_8">8sp</dimen>
+    <dimen name="sp_value_9">9sp</dimen>
+    <dimen name="sp_value_10">10sp</dimen>
+    <dimen name="sp_value_11">11sp</dimen>
+    <dimen name="sp_value_12">12sp</dimen>
+    <dimen name="sp_value_13">13sp</dimen>
+    <dimen name="sp_value_14">14sp </dimen>
+    <dimen name="sp_value_15">15sp</dimen>
+    <dimen name="sp_value_16">16sp</dimen>
+    <dimen name="sp_value_17">17sp</dimen>
+    <dimen name="sp_value_18">18sp</dimen>
+    <dimen name="sp_value_19">19sp</dimen>
+    <dimen name="sp_value_20">20sp</dimen>
+    <dimen name="sp_value_21">21sp</dimen>
+    <dimen name="sp_value_22">22sp</dimen>
+    <dimen name="sp_value_23">23sp</dimen>
+    <dimen name="sp_value_24">24sp</dimen>
+    <dimen name="sp_value_25">25sp</dimen>
+    <dimen name="sp_value_26">26sp</dimen>
+    <dimen name="sp_value_27">27sp</dimen>
+    <dimen name="sp_value_28">28sp</dimen>
+    <dimen name="sp_value_29">29sp</dimen>
+    <dimen name="sp_value_30">30sp</dimen>
+    <dimen name="sp_value_31">31sp</dimen>
+    <dimen name="sp_value_32">32sp</dimen>
+    <dimen name="sp_value_33">33sp</dimen>
+    <dimen name="sp_value_34">34sp</dimen>
+    <dimen name="sp_value_35">35sp</dimen>
+    <dimen name="sp_value_36">36sp</dimen>
+    <dimen name="sp_value_37">37sp</dimen>
+    <dimen name="sp_value_38">38sp</dimen>
+    <dimen name="sp_value_39">39sp</dimen>
+    <dimen name="sp_value_40">40sp</dimen>
+    <dimen name="sp_value_45">45sp</dimen>
+    <dimen name="sp_value_48">48sp</dimen>
+    <dimen name="sp_value_64">64sp</dimen>
+    <dimen name="sp_value_72">72sp</dimen>
+    <!--常用的sp的值结束-->
+    <!--常用的dp开始-->
+    <dimen name="dp_value_0">0dp</dimen>
+    <dimen name="dp_value_1">1dp</dimen>
+    <dimen name="dp_value_2">2dp</dimen>
+    <dimen name="dp_value_3">3dp</dimen>
+    <dimen name="dp_value_4">4dp</dimen>
+    <dimen name="dp_value_5">5dp</dimen>
+    <dimen name="dp_value_6">6dp</dimen>
+    <dimen name="dp_value_7">7dp</dimen>
+    <dimen name="dp_value_8">8dp</dimen>
+    <dimen name="dp_value_9">9dp</dimen>
+    <dimen name="dp_value_10">10dp</dimen>
+    <dimen name="dp_value_11">11dp</dimen>
+    <dimen name="dp_value_12">12dp</dimen>
+    <dimen name="dp_value_13">13dp</dimen>
+    <dimen name="dp_value_14">14dp </dimen>
+    <dimen name="dp_value_15">15dp</dimen>
+    <dimen name="dp_value_16">16dp</dimen>
+    <dimen name="dp_value_17">17dp</dimen>
+    <dimen name="dp_value_18">18dp</dimen>
+    <dimen name="dp_value_19">19dp</dimen>
+    <dimen name="dp_value_20">20dp</dimen>
+    <dimen name="dp_value_21">21dp</dimen>
+    <dimen name="dp_value_22">22dp</dimen>
+    <dimen name="dp_value_23">23dp</dimen>
+    <dimen name="dp_value_24">24dp</dimen>
+    <dimen name="dp_value_25">25dp</dimen>
+    <dimen name="dp_value_26">26dp</dimen>
+    <dimen name="dp_value_27">27dp</dimen>
+    <dimen name="dp_value_28">28dp</dimen>
+    <dimen name="dp_value_29">29dp</dimen>
+    <dimen name="dp_value_30">30dp</dimen>
+    <dimen name="dp_value_31">31dp</dimen>
+    <dimen name="dp_value_32">32dp</dimen>
+    <dimen name="dp_value_33">33dp</dimen>
+    <dimen name="dp_value_34">34dp</dimen>
+    <dimen name="dp_value_35">35dp</dimen>
+    <dimen name="dp_value_36">36dp</dimen>
+    <dimen name="dp_value_37">37dp</dimen>
+    <dimen name="dp_value_38">38dp</dimen>
+    <dimen name="dp_value_39">39dp</dimen>
+    <dimen name="dp_value_40">40dp</dimen>
+    <dimen name="dp_value_41">41dp</dimen>
+    <dimen name="dp_value_42">42dp</dimen>
+    <dimen name="dp_value_43">43dp</dimen>
+    <dimen name="dp_value_44">44dp</dimen>
+    <dimen name="dp_value_45">45dp</dimen>
+    <dimen name="dp_value_48">48dp</dimen>
+    <dimen name="dp_value_49">49dp</dimen>
+    <dimen name="dp_value_50">50dp</dimen>
+    <dimen name="dp_value_51">51dp</dimen>
+    <dimen name="dp_value_52">52dp</dimen>
+    <dimen name="dp_value_53">53dp</dimen>
+    <dimen name="dp_value_54">54dp</dimen>
+    <dimen name="dp_value_55">55dp</dimen>
+    <dimen name="dp_value_56">56dp</dimen>
+    <dimen name="dp_value_57">57dp</dimen>
+    <dimen name="dp_value_58">58dp</dimen>
+    <dimen name="dp_value_59">59dp</dimen>
+    <dimen name="dp_value_60">60dp</dimen>
+    <dimen name="dp_value_61">61dp</dimen>
+    <dimen name="dp_value_62">62dp</dimen>
+    <dimen name="dp_value_63">63dp</dimen>
+    <dimen name="dp_value_64">64dp</dimen>
+    <dimen name="dp_value_65">65dp</dimen>
+    <dimen name="dp_value_66">66dp</dimen>
+    <dimen name="dp_value_67">67dp</dimen>
+    <dimen name="dp_value_68">68dp</dimen>
+    <dimen name="dp_value_69">69dp</dimen>
+    <dimen name="dp_value_70">70dp</dimen>
+    <dimen name="dp_value_71">71dp</dimen>
+    <dimen name="dp_value_72">72dp</dimen>
+
+    <dimen name="dp_value_100">100dp</dimen>
+    <dimen name="dp_value_150">150dp</dimen>
+    <dimen name="dp_value_200">200dp</dimen>
+    <!--常用的结束开始-->
+    <!--主APP需求尺寸结束 -->
+
+
+    <!-- MainActivity需求尺寸开始-->
+
+    <!-- MainActivity需求尺寸结束-->
+    <!--
+            目录
+        1.MainActivity尺寸
+    -->
+    <!-- MainActivity的尺寸大小开始-->
+
+    <!-- MainActivity的尺寸大小结束-->
+</resources>

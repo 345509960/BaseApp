@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HeaderView">
+
+    <LinearLayout
+        android:id="@+id/ll_top_layout"
+        android:layout_width="@dimen/dp_value_0"
+        android:layout_weight="20"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_value_5"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/dp_value_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/choose_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="城市"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="@dimen/dp_value_8"
+            android:layout_marginRight="@dimen/dp_value_5"
+            android:layout_marginBottom="@dimen/dp_value_4"
+            android:textSize="@dimen/sp_value_14" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_below="@+id/choose_city"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/header_search_ll"
+        android:layout_width="@dimen/dp_value_0"
+        android:layout_weight="60"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_value_5"
+        android:layout_marginRight="@dimen/dp_value_55"
+        android:layout_marginTop="@dimen/dp_value_5"
+        android:layout_marginBottom="@dimen/dp_value_5"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/search_bar"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="@dimen/dp_value_0"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_value_10"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:scrollHorizontally="true"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="5dp"
+            android:hint="搜索土嘢商品"
+            android:textColorHint="#ffffff"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_value_12" />
+        <!-- 点击搜索框后，左边图标变到右边并转化为确认按钮 -->
+
+        <ImageButton
+            android:id="@+id/search_right_ib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:src="@drawable/search_icon"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
+

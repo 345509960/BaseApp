@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rg_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/RG_BOTTOM_STYLES"
+        android:layout_alignParentBottom="true">
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/RB_BOTTOM_STYLES"
+            android:text="@string/text_mainactivity_home"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_record_selector" />
+        <RadioButton
+            android:id="@+id/rb_nearby"
+            style="@style/RB_BOTTOM_STYLES"
+            android:text="@string/text_maincativity_calssify"
+            android:drawableTop="@drawable/tab_record_selector" />
+        <RadioButton
+            android:id="@+id/rb_featured"
+            style="@style/RB_BOTTOM_STYLES"
+            android:text="@string/text_mianactivity_shopcar"
+            android:drawableTop="@drawable/tab_record_selector" />
+        <RadioButton
+            android:id="@+id/rb_min"
+            style="@style/RB_BOTTOM_STYLES"
+            android:text="@string/text_mainactivity_mine"
+            android:drawableTop="@drawable/tab_record_selector" />
+</RadioGroup>

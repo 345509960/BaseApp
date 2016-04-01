@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BaseApp</string>
+
+
+    <!--
+           目录
+        0.主APP需求字符串
+        1.MainActivity的字符串
+    -->
+    <!-- 主APP需求字符串开始-->
+        
+    <!-- 主APP需求字符串结束-->
+    <!-- MainActivity的字符串开始-->
+    <string name="text_details_list">清单</string>
+    <string name="text_mainactivity_mine">我的</string>
+    <string name="text_mianactivity_shopcar">购物车</string>
+    <string name="text_maincativity_calssify">分类</string>
+    <string name="text_mainactivity_home">首页</string>
+    <!-- MainActivity的字符串结束-->
+</resources>
