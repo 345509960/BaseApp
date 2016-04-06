@@ -13,23 +13,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.yuanyuan.baseapp.biz.HomeFragmentAdsEntityBiz;
-import com.yuanyuan.baseapp.entity.TestEntity;
-import com.yuanyuan.baseapp.fragment.BaseFragment;
-import com.yuanyuan.baseapp.fragment.TestFragment;
-import com.yuanyuan.baseapp.fragment.TestFragment2;
-import com.yuanyuan.baseapp.utils.GsonUtils;
-import com.yuanyuan.baseapp.utils.L;
-import com.yuanyuan.baseapp.utils.T;
+import com.yuanyuan.baseapp.R;
+import com.yuanyuan.baseapp.domain.BaseActivity;
+import com.yuanyuan.baseapp.fragment.FragmentFactory;
 import com.yuanyuan.baseapp.view.CustomViewPager;
-import com.zhy.http.okhttp.callback.StringCallback;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import okhttp3.Request;
 
 
 public class MainActivity extends BaseActivity implements CustomViewPager.OnPageChangeListener,RadioGroup.OnCheckedChangeListener {
@@ -78,8 +68,7 @@ public class MainActivity extends BaseActivity implements CustomViewPager.OnPage
 
 
     //数据对象开始//
-        //保存四大模块的基础Fragment
-    private List<BaseFragment> baseFragments;
+
         //内部适配器
     private InnerPageAdapter adapter;
     //数据对象结束//
@@ -102,12 +91,7 @@ public class MainActivity extends BaseActivity implements CustomViewPager.OnPage
         mRgBottomLayout.setOnCheckedChangeListener(this);
     }
     protected void initValues() {
-        baseFragments = new ArrayList<BaseFragment>();
         adapter = new InnerPageAdapter(getSupportFragmentManager());
-        baseFragments.add(new TestFragment());
-        baseFragments.add(new TestFragment2());
-        baseFragments.add(new TestFragment());
-        baseFragments.add(new TestFragment2());
         mCustomViewPager.setAdapter(adapter);
     }
     /**
@@ -120,6 +104,7 @@ public class MainActivity extends BaseActivity implements CustomViewPager.OnPage
     /**
      * 内部页面适配器
      */
+    //FragmentStatePagerAdapter是一个不会缓存的Fragment适配器 如果需要大量的Fragment可以这样设置
     private class InnerPageAdapter extends FragmentPagerAdapter {
 
         public InnerPageAdapter(FragmentManager fm) {
@@ -128,12 +113,13 @@ public class MainActivity extends BaseActivity implements CustomViewPager.OnPage
 
         @Override
         public Fragment getItem(int position) {
-            return baseFragments.get(position);
+            //从工厂里面拿出Fragment返回
+            return FragmentFactory.getFragment(position);
         }
-
+        //固定设置大小 如果需要变化重新设置
         @Override
         public int getCount() {
-            return baseFragments.size();
+            return 4;
         }
     }
 

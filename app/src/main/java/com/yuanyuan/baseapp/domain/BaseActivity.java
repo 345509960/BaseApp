@@ -1,4 +1,4 @@
-package com.yuanyuan.baseapp;
+package com.yuanyuan.baseapp.domain;
 
 import android.content.Context;
 import android.os.Bundle;
