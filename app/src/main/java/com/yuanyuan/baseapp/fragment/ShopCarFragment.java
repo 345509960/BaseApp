@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.yuanyuan.baseapp.base.BaseFragment;
+
 /**
  * Created by Administrator on 2016/4/6.
  */
-public class ShopCarFragment extends BaseFragment{
+public class ShopCarFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

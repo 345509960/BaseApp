@@ -1,4 +1,4 @@
-package com.yuanyuan.baseapp.fragment;
+package com.yuanyuan.baseapp.base;
 
 import android.content.Context;
 import android.os.Bundle;

@@ -2,6 +2,8 @@ package com.yuanyuan.baseapp.fragment;
 
 import android.support.v4.util.SparseArrayCompat;
 
+import com.yuanyuan.baseapp.base.BaseFragment;
+
 /**
  * 工厂模式获取Fragment on 2016/4/6.
  */

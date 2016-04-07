@@ -13,8 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.yuanyuan.baseapp.R;
-import com.yuanyuan.baseapp.domain.BaseActivity;
+import com.yuanyuan.baseapp.base.BaseActivity;
 import com.yuanyuan.baseapp.fragment.FragmentFactory;
 import com.yuanyuan.baseapp.view.CustomViewPager;
 

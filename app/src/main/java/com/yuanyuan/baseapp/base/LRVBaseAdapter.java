@@ -1,10 +1,9 @@
-package com.yuanyuan.baseapp.adpter;
+package com.yuanyuan.baseapp.base;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yuanyuan.baseapp.utils.T;
@@ -13,48 +12,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Aron on 2016/3/31.
+ * Created by Administrator on 2016/3/31.
  */
-public abstract class LBaseAdapter extends BaseAdapter {
+public abstract class LRVBaseAdapter extends RecyclerView.Adapter {
     public Context context;
     public List<T> datasource;
     public LayoutInflater inflater;
     public ImageLoader imageLoader;
-    public LBaseAdapter(Context context) {
-       this(context,null);
+    public LRVBaseAdapter(Context context) {
+        this(context,null);
     }
 
-    public LBaseAdapter(Context context,List<T> datasource) {
+    public LRVBaseAdapter(Context context,List<T> datasource) {
         this(context,datasource,null);
     }
-    public  LBaseAdapter(Context context, List<T> datasource, ImageLoader imageLoader) {
+    public  LRVBaseAdapter(Context context, List<T> datasource, ImageLoader imageLoader) {
         super();
         this.context=context;
         this.datasource= (datasource!=null?datasource:new ArrayList<T>());
         this.imageLoader = imageLoader;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
-    //获取数据源的数量
     @Override
-    public int getCount() {
-        return datasource.size();
-    }
-    //获取当前Position对象
-    @Override
-    public Object getItem(int position) {
-        return datasource.get(position);
-    }
-    //获取当前Position对象ID
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+    public abstract RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType);
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        return getItemView(position, convertView, parent);
+    public abstract  void onBindViewHolder(RecyclerView.ViewHolder holder, int position);
+
+    @Override
+    public int getItemCount() {
+        return datasource.size();
     }
-    public abstract View getItemView(int position ,View convertView,ViewGroup parent);
 
     //设置index的对象
     public void set(int index, T elem) {
