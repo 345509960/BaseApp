@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -15,21 +17,22 @@ import java.util.List;
 /**
  * Created by Aron on 2016/3/31.
  */
-public abstract class LBaseAdapter extends BaseAdapter {
+public abstract class LBaseAdapter extends BaseAdapter implements AdapterView.OnItemClickListener{
     public Context context;
     public List<T> datasource;
     public LayoutInflater inflater;
     public ImageLoader imageLoader;
-    public LBaseAdapter(Context context) {
-       this(context,null);
+    public LBaseAdapter(Context context, AbsListView absListView) {
+       this(context,absListView,null);
     }
 
-    public LBaseAdapter(Context context,List<T> datasource) {
-        this(context,datasource,null);
+    public LBaseAdapter(Context context,AbsListView absListView,List<T> datasource) {
+        this(context,absListView,datasource,null);
     }
-    public  LBaseAdapter(Context context, List<T> datasource, ImageLoader imageLoader) {
+    public  LBaseAdapter(Context context,AbsListView absListView, List<T> datasource, ImageLoader imageLoader) {
         super();
         this.context=context;
+        absListView.setOnItemClickListener(this);
         this.datasource= (datasource!=null?datasource:new ArrayList<T>());
         this.imageLoader = imageLoader;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -85,5 +88,17 @@ public abstract class LBaseAdapter extends BaseAdapter {
     public void clear() {
         datasource.clear();
         notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        onNormalItemClick(parent,view,position,id);
+    }
+    /**
+     * @des 点击普通条目对应的事件处理
+     * @call 如果子类需要处理item的点击事件,就直接覆写此方法
+     */
+    public void onNormalItemClick(AdapterView<?> parent, View view, int position, long id) {
+
     }
 }

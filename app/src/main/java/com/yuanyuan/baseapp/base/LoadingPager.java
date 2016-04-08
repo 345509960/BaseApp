@@ -118,6 +118,7 @@ public abstract  class LoadingPager extends FrameLayout {
             int state=STATE_LOADING;
             mCurState=state;
             refreshUI();// 2. 显示正在加载数据
+            //加载数据
             LoadedResult tempState=initData();
         }
     }
