@@ -8,15 +8,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.yuanyuan.baseapp.base.BaseFragment;
+import com.yuanyuan.baseapp.base.BaseFragmentCommon;
 
 /**
  * Created by Administrator on 2016/4/6.
  */
-public class ClassFragment extends BaseFragment {
+public class ClassFragment extends BaseFragmentCommon {
+
+
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        TextView textView=new TextView(context);
+    public View initView() {
+        TextView textView=new TextView(mContext);
         textView.setText("class");
         return textView;
     }

@@ -18,7 +18,7 @@
     <dimen name="sp_value_11">11sp</dimen>
     <dimen name="sp_value_12">12sp</dimen>
     <dimen name="sp_value_13">13sp</dimen>
-    <dimen name="sp_value_14">14sp </dimen>
+    <dimen name="sp_value_14">14sp</dimen>
     <dimen name="sp_value_15">15sp</dimen>
     <dimen name="sp_value_16">16sp</dimen>
     <dimen name="sp_value_17">17sp</dimen>
@@ -65,7 +65,7 @@
     <dimen name="dp_value_11">11dp</dimen>
     <dimen name="dp_value_12">12dp</dimen>
     <dimen name="dp_value_13">13dp</dimen>
-    <dimen name="dp_value_14">14dp </dimen>
+    <dimen name="dp_value_14">14dp</dimen>
     <dimen name="dp_value_15">15dp</dimen>
     <dimen name="dp_value_16">16dp</dimen>
     <dimen name="dp_value_17">17dp</dimen>

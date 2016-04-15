@@ -3,6 +3,7 @@ package com.yuanyuan.baseapp.fragment;
 import android.support.v4.util.SparseArrayCompat;
 
 import com.yuanyuan.baseapp.base.BaseFragment;
+import com.yuanyuan.baseapp.base.BaseFragmentCommon;
 
 /**
  * 工厂模式获取Fragment on 2016/4/6.
@@ -13,11 +14,11 @@ public class FragmentFactory {
     public static final int	FRAGMENT_SHOPCARD= 2;
     public static final int	FRAGMENT_MINE= 3;
     //緩存Fragment數組
-    public static SparseArrayCompat<BaseFragment> cachesFragment=new SparseArrayCompat<>();
+    public static SparseArrayCompat<BaseFragmentCommon> cachesFragment=new SparseArrayCompat<>();
     //获取Fragment的工厂
-    public static BaseFragment getFragment(int position){
-        BaseFragment fragment=null;
-        BaseFragment tmpFragment=cachesFragment.get(position);
+    public static BaseFragmentCommon getFragment(int position){
+        BaseFragmentCommon fragment=null;
+        BaseFragmentCommon tmpFragment=cachesFragment.get(position);
         if(tmpFragment!=null){
             fragment=tmpFragment;
             return fragment;

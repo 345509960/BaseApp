@@ -8,7 +8,7 @@
         1.MainActivity的字符串
     -->
     <!-- 主APP需求字符串开始-->
-        
+
     <!-- 主APP需求字符串结束-->
     <!-- MainActivity的字符串开始-->
     <string name="text_details_list">清单</string>
