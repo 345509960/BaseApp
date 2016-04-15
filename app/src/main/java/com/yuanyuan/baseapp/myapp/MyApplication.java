@@ -2,6 +2,7 @@ package com.yuanyuan.baseapp.myapp;
 
 import android.app.Application;
 import android.graphics.Bitmap;
+import android.os.Handler;
 import android.os.Looper;
 
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -23,15 +24,22 @@ public class MyApplication extends Application {
      * 在需要Context对象地方，可以使用MyApp对象
      * mInstance为静态的，近似采用单例模式（因为这是安卓中的内容，不能将MyApp构造器写成私有）
      */
-    public static MyApplication mMyApplication;
-
-    public static Thread mCurrentMainThread;
+    private static MyApplication mMyApplication;
+    //主线程
+    private static Thread mCurrentMainThread;
+    //主线程ID
+    private static long mMainThreadId;
+    //主线程Looper
+    private static Looper mMianLooper;
+    //主线程 Hanlder
+    private static Handler mHandler;
     @Override
     public void onCreate() {
         super.onCreate();
         mMyApplication=this;
-        mCurrentMainThread= Looper.getMainLooper().getThread();
-        
+        mCurrentMainThread= Thread.currentThread();
+        mMainThreadId=android.os.Process.myTid();
+        mHandler=new Handler();
         initImagerLoader();
     }
 
@@ -75,5 +83,22 @@ public class MyApplication extends Application {
                 .defaultDisplayImageOptions(dconfig)//设置默认情况下的Option
                 .imageDownloader(new BaseImageDownloader(getApplicationContext(), 5 * 1000, 30 * 1000)).build(); // connectTimeout (5 s),
         ImageLoader.getInstance().init(config);
+    }
+
+
+    public static Thread getmCurrentMainThread() {
+        return mCurrentMainThread;
+    }
+
+    public static long getmMainThreadId() {
+        return mMainThreadId;
+    }
+
+    public static Looper getmMianLooper() {
+        return mMianLooper;
+    }
+
+    public static Handler getmHandler() {
+        return mHandler;
     }
 }

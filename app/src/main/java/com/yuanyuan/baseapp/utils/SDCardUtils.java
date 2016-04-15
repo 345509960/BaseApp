@@ -1,9 +1,14 @@
 package com.yuanyuan.baseapp.utils;
 
+import android.content.Context;
+import android.content.res.AssetManager;
 import android.os.Environment;
 import android.os.StatFs;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * SD卡相关辅助类 on 2016/3/24.
@@ -87,5 +92,8 @@ public class SDCardUtils {
     {
         return Environment.getRootDirectory().getAbsolutePath();
     }
+
+
+
 
 }
