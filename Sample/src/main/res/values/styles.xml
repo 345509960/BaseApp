@@ -1,0 +1,48 @@
+<resources>
+    <!--
+            目录
+        1.MainActivity布局
+    -->
+
+
+    <!-- MainActivity布局 -->
+
+    <!-- 头布局样式开始-->
+    <style name="HeaderView">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:background">@color/main_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_value_50</item>
+    </style>
+
+    <style name="HeaderViewTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- MainActivity底部样式开始-->
+    <style name="RG_BOTTOM_STYLES">
+        <item name="android:minHeight">@dimen/dp_value_50</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:maxHeight">@dimen/dp_value_50</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="RB_BOTTOM_STYLES">
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dp_value_10</item>
+        <item name="android:textSize">@dimen/sp_value_18</item>
+        <item name="android:textColor">@color/tab_text_selector</item>
+    </style>
+    <!-- MainActivity底部样式结束-->
+    <!-- 头布局样式结束-->
+</resources>

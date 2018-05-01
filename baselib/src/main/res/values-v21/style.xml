@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@android:color/white</item><!--  导航按钮是颜色 -->
+        <item name="actionMenuTextColor">@android:color/white</item> <!--  敲定颜色-->
+        <item name="selectableItemBackground">@drawable/toolbar_select_menu_bg
+        </item><!--  选择菜单的背景颜色-->
+        <item name="searchViewStyle">@style/ToolBar.Widget.SearchView</item><!--  搜索框样式-->
+        <item name="android:textColorHint">@android:color/white</item><!--  搜索框提示字体颜色-->
+        <item name="android:textColorPrimary">@android:color/black</item><!--  搜索框输入字体颜色-->
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item><!--  搜索框光标颜色-->
+        <item name="android:colorControlActivated">@android:color/transparent</item><!--  搜索框下划线-->
+    </style>
+</resources>
