@@ -1,9 +1,11 @@
-package com.yuanyuan.baseapp;
+package com.yuanyuan.baseapp.ui;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,17 +13,33 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.lyc.love.baselib.ui.AbstractActivity;
+import com.yuanyuan.baseapp.R;
 
 
 public class MainActivity extends AbstractActivity {
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    protected void initView(View view) {
+//        setSupportActionBarLogo(null);
         setSupportActionBarLogo(R.mipmap.ic_launcher);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        setDisplayShowTitleEnabled(true);
+        setDisplayHomeAsUpEnabled(true);
+
+//        setStatusBarColor(R.color.black);
+
+        getToolbar().setNavigationContentDescription("xxx");
+
+        getToolbar().setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "点击了导航按钮", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //修改状态栏颜色
+//        setStatusBarColor(android.R.color.holo_blue_light);
     }
 
     @Override
@@ -36,6 +54,18 @@ public class MainActivity extends AbstractActivity {
         startActivity(i);
     }
 
+    public void startCustom(View view)
+    {
+        Intent i = new Intent(this, CustomToolBarActivity.class);
+        startActivity(i);
+    }
+
+    public void startActionBar(View view)
+    {
+        Intent i = new Intent(this, ActionBarActivity.class);
+        startActivity(i);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -43,20 +73,11 @@ public class MainActivity extends AbstractActivity {
 
         MenuItem serachTtem=menu.findItem(R.id.action_search);
         SearchView searchView= (SearchView) serachTtem.getActionView();
-        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
-            @Override
-            public boolean onClose() {
-                Toast.makeText(MainActivity.this, "onClose", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
-        searchView.setOnSearchClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Search", Toast.LENGTH_SHORT).show();
 
-            }
-        });
+        SearchManager searchManager= (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+       if (searchManager!=null){
+           searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+       }
 
         //定义一个监听器
         MenuItem.OnActionExpandListener expandListener = new MenuItem.OnActionExpandListener()

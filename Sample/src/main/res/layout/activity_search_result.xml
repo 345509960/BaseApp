@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.SearchResultActivity">
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </android.support.constraint.ConstraintLayout>
