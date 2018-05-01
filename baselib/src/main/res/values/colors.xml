@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">@color/orange</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <color name="colorAccent">#FF4081</color>
+
+
+
+    <!--
+           目录
+       1.色系
+       2.通用颜色
+   -->
+
+    <!-- 七大色系开始 -->
+    <color name="red">#CC0000</color>
+    <color name="orange">#ff9900</color>
+    <color name="yellow">#ffff00</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="indigo">#9900ff</color>
+    <color name="purple">#ff00ff</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 黑色-->
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <!-- 七大色系结束 -->
+
+
 </resources>

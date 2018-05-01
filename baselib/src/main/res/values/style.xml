@@ -1,2 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <style name="AppTheme" parent="BaseAppTheme"/>
+
+    <style name="BaseAppTheme" parent="AppTheme.Base">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!-- ToolBar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@android:color/white</item><!--  导航按钮是颜色 -->
+        <item name="actionMenuTextColor">@android:color/white</item> <!--  标题栏菜单颜色-->
+        <item name="selectableItemBackground">@drawable/toolbar_select_menu_bg</item><!--  选择菜单的背景颜色-->
+        <item name="searchViewStyle">@style/ToolBar.Widget.SearchView</item><!--  搜索框样式-->
+        <item name="android:textColorHint">@android:color/white</item><!--  搜索框提示字体颜色-->
+        <item name="android:textColorPrimary">@android:color/black</item><!--  搜索框输入字体颜色-->
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item><!--  搜索框光标颜色-->
+    </style>
+
+    <!--  TitleText-->
+    <style name="ToolBar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item><!--  Title 的字体颜色-->
+    </style>
+
+
+    <!--  菜单的样式-->
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">@color/colorPrimary</item><!--  菜单的背景颜色-->
+        <item name="android:textColor">@android:color/white</item><!--  菜单的字体颜色-->
+
+    </style>
+
+    <!--  搜索框的样式-->
+    <style name="ToolBar.Widget.SearchView" parent="Base.Widget.AppCompat.SearchView">
+        <item name="defaultQueryHint">请输入关键字</item><!--  搜索框提醒Hint-->
+    </style>
+
+</resources>

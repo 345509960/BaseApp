@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="AppTheme" parent="BaseAppTheme"/>
+
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@android:color/white</item><!--  导航按钮是颜色 -->
         <item name="actionMenuTextColor">@android:color/white</item> <!--  敲定颜色-->
