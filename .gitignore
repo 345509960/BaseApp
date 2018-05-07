@@ -82,3 +82,21 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/.gradle/
+/.idea/
+/baselib/baselib.iml
+Sample/libs/
+baselib/libs/
+baselib/src/main/java/com/lyc/love/baselib/utils/
+baselib/src/main/res/mipmap-hdpi/
+baselib/src/main/res/mipmap-mdpi/
+baselib/src/main/res/mipmap-xxhdpi/
+baselib/src/main/res/mipmap-xxxhdpi/
+libs/
+src/main/java/com/lyc/love/baselib/utils/
+src/main/res/mipmap-hdpi/
+src/main/res/mipmap-mdpi/
+src/main/res/mipmap-xxhdpi/
+src/main/res/mipmap-xxxhdpi/
+/Sample/Sample.iml
+/projectFilesBackup/
