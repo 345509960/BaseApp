@@ -20,6 +20,11 @@ import android.widget.LinearLayout;
 
 import com.lyc.love.baselib.R;
 
+/**
+    @author lyc
+    create date: 2018/5/7 0007
+    des:基础Activity类
+**/
 public abstract class AbstractActivity extends AppCompatActivity {
 
     private LinearLayout mRoot;
