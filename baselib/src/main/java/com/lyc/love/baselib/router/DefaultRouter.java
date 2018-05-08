@@ -23,10 +23,16 @@ public class DefaultRouter implements IRouter {
        if (routerBuilder==null){
            return ;
        }
-       Postcard postcard;
+       Postcard postcard=null;
        if (!TextUtils.isEmpty(routerBuilder.mUrl)){
            postcard=ARouter.getInstance().build(routerBuilder.mUrl);
            postcard.with(routerBuilder.mBundle);
+           if (routerBuilder.mContext!=null){
+               postcard.navigation(routerBuilder.mContext);
+           }else {
+               postcard.navigation();
+           }
        }
+
     }
 }

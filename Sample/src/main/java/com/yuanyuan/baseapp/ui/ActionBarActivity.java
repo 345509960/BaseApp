@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.yuanyuan.baseapp.R;
-@Router(path="")
+import com.yuanyuan.baseapp.constant.SampleConstant;
+
+@Route(path = SampleConstant.ROUTER_ACTIONBAR)
 public class ActionBarActivity extends AppCompatActivity {
 
     @Override

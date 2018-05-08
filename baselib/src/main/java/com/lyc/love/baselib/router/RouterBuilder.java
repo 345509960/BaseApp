@@ -15,6 +15,9 @@ public class RouterBuilder {
 
     protected Bundle mBundle;
 
+
+    protected RouterBuilder mRouterBuilder;
+
     public RouterBuilder withContext(Context context){
         this.mContext=context;
         return this;
@@ -116,7 +119,4 @@ public class RouterBuilder {
         return this;
     }
 
-    public RouterBuilder build(){
-        return new RouterBuilder();
-    }
 }

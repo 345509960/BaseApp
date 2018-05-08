@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.lyc.love.baselib.ui.AbstractActivity;
 import com.yuanyuan.baseapp.R;
+import com.yuanyuan.baseapp.constant.SampleConstant;
 
+@Route(path = SampleConstant.ROUTER_TWO)
 public class TwoActivity extends AbstractActivity {
 
 

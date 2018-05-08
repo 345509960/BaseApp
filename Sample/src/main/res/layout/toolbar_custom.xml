@@ -2,8 +2,9 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@android:color/transparent"
-    android:layout_height="?attr/actionBarSize">
+    android:layout_height="?actionBarSize">
 
     <TextView
         android:id="@+id/tv_title"

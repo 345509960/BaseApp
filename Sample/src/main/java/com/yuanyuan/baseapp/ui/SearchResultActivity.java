@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.lyc.love.baselib.ui.AbstractActivity;
 import com.yuanyuan.baseapp.R;
+import com.yuanyuan.baseapp.constant.SampleConstant;
 
+@Route(path = SampleConstant.ROUTER_SERACHRESULT)
 public class SearchResultActivity extends AbstractActivity {
 
     private TextView mTextView;

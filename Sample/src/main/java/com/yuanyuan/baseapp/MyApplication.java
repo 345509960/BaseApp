@@ -1,10 +1,11 @@
 package com.yuanyuan.baseapp;
 
-import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
-public class MyApplication extends Application{
+import com.lyc.love.baselib.BaseApplication;
+
+public class MyApplication extends BaseApplication{
 
 
     @Override

@@ -143,9 +143,7 @@ public abstract class AbstractActivity extends AppCompatActivity {
 
     public void setCustomToolBar(View view){
         if (mToolbar !=null){
-            mToolbar.setTitleMarginStart(0);
             mToolbar.addView(view);
-            setSupportActionBar(mToolbar);
             if (getSupportActionBar()!=null){
                 getSupportActionBar().setDisplayUseLogoEnabled(false);
                 getSupportActionBar().setDisplayShowTitleEnabled(false);

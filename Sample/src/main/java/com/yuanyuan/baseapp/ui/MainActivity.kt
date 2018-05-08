@@ -41,24 +41,20 @@ class MainActivity : AbstractActivity() {
 
 
     fun start(view: View) {
-        Router.getInstance().navigation(RouterBuilder()
-                .withContext(this@MainActivity)
-                .withUrl(SampleConstant.ROUTER_TWO)
-                .build())
+        Router.getInstance().navigation(RouterBuilder().withContext(this@MainActivity)
+                .withUrl(SampleConstant.ROUTER_TWO))
     }
 
     fun startCustom(view: View) {
         Router.getInstance().navigation(RouterBuilder()
                 .withContext(this)
-                .withUrl(SampleConstant.ROUTER_CUSTOMTOOL)
-                .build())
+                .withUrl(SampleConstant.ROUTER_CUSTOMTOOL))
     }
 
     fun startActionBar(view: View) {
         Router.getInstance().navigation(RouterBuilder()
                 .withContext(this)
-                .withUrl(SampleConstant.ROUTER_ACTIONBAR)
-                .build())
+                .withUrl(SampleConstant.ROUTER_ACTIONBAR))
     }
 
 

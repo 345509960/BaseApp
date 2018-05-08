@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
     tools:context=".ui.ActionBarActivity">
 
 
@@ -15,7 +17,6 @@
         android:background="@color/colorPrimary"
         app:theme="@style/ToolbarTheme"
         app:logo="@mipmap/back"
-        android:fitsSystemWindows="true"
         app:popupTheme="@style/ToolbarPopupTheme"
         app:titleTextAppearance="@style/ToolBar.TitleText"
         android:minHeight="?actionBarSize">

@@ -8,9 +8,12 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.lyc.love.baselib.ui.AbstractActivity;
 import com.yuanyuan.baseapp.R;
+import com.yuanyuan.baseapp.constant.SampleConstant;
 
+@Route(path = SampleConstant.ROUTER_CUSTOMTOOL)
 public class CustomToolBarActivity extends AbstractActivity {
 
 
