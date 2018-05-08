@@ -1,5 +1,10 @@
 package com.lyc.love.baselib.router;
 
+import android.app.Application;
+
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.lyc.love.baselib.BuildConfig;
+
 public class Router implements IRouter {
 
     private Router(IRouter proxy){
@@ -20,6 +25,11 @@ public class Router implements IRouter {
     }
 
     private IRouter mProxy;
+
+    @Override
+    public void init(Application application) {
+       mProxy.init(application);
+    }
 
     @Override
     public void navigation(RouterBuilder routerBuilder) {

@@ -87,7 +87,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/attr" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/packaged-aidl" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/packaged_res" />

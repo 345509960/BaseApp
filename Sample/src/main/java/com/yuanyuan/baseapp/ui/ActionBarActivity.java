@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.yuanyuan.baseapp.R;
-
+@Router(path="")
 public class ActionBarActivity extends AppCompatActivity {
 
     @Override
