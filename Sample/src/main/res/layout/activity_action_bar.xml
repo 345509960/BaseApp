@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    android:background="@color/colorPrimary"
     tools:context=".ui.ActionBarActivity">
 
 
