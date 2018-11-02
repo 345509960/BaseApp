@@ -54,7 +54,6 @@ dependencies {
     api rootProject.ext.dependencies["dagger"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
     api rootProject.ext.dependencies['fast-json']
-    //    api rootProject.ext.dependencies['weex']
     api rootProject.ext.dependencies['glide_loader']
     api rootProject.ext.dependencies['glide_transformations']
     api rootProject.ext.dependencies['green_dao']
@@ -67,8 +66,7 @@ dependencies {
     implementation rootProject.ext.dependencies['guava']
     api rootProject.ext.dependencies['multidex']
     api rootProject.ext.dependencies["kotlin_config"]
-    api rootProject.ext.dependencies['butterknife']
-    annotationProcessor rootProject.ext.dependencies['butterknife-compiler']
+
     implementation 'com.zyao89:zloading:1.0.11'
     api 'com.umeng.sdk:common:1.5.0'
     api 'com.umeng.sdk:analytics:7.5.0'

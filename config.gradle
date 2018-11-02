@@ -18,7 +18,6 @@ def retrofitVersion = "2.3.0"
 
 def okhttpVersion = "3.1.2"
 
-def butterknifeVersion = "8.4.0"
 
 
 ext {
@@ -34,56 +33,47 @@ ext {
     ]
 
     dependencies = [
-
+            //Android UI扩展库
             "support-v7"           : "com.android.support:appcompat-v7:${supportVersion}",
             "support-v4"           : "com.android.support:support-v4:${supportVersion}",
             "card-view"            : "com.android.support:cardview-v7:${supportVersion}",
             "recycler-view"        : "com.android.support:recyclerview-v7:${supportVersion}",
             "support-constraint"   : "com.android.support.constraint:constraint-layout:1.1.2",
             "support-design"       : "com.android.support:design:${supportVersion}",
-
+            //Android测试库
             "junit"                : "junit:junit:${junitVersion}",
             "test-runner"          : "com.android.support.test:runner:${testRunnerVersion}",
             "test-espresso-core"   : "com.android.support.test.espresso:espresso-core:${testEspressoCore}",
-
-            //路由
+            //路由库
             "router"               : "com.alibaba:arouter-api:${routerVersion}",
             "router-compiler"      : "com.alibaba:arouter-compiler:${routerCompilerVersion}",
-
-            //依赖注入
+            //依赖注入库
             "dagger"               : "com.google.dagger:dagger:${daggerVersion}",
             "dagger-compiler"      : "com.google.dagger:dagger-compiler:${daggerVersion}",
-
-            //Weex
-            "weex"                 : "com.taobao.android:weex_sdk:${weexVersion}",
-
             //Json格式框架
             "fast-json"            : "com.alibaba:fastjson:${fastJsonVersion}",
+            "gson"                 : "com.google.code.gson:gson:2.8.2",
 
             //图片框架
             "glide_loader"         : "com.github.bumptech.glide:glide:${glideVersion}",
             "glide_transformations": "com.github.open-android:Glide-transformations:0.1.0",
 
-            //GreenDao
+            //本地数据库处理框架
             "green_dao"            : "org.greenrobot:greendao:${greendaoVersion}",
             "green_generator"      : "org.greenrobot:greendao-generator:${greendaoVersion}",
 
-            //Retrofit
+            //网络库
             "retrofit"             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
             "okhttp"               : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
             "retrofit_adpter"      : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
             "gson_json_retrofit"   : "com.squareup.retrofit2:converter-gson:2.3.0",
-            "gson"                 : "com.google.code.gson:gson:2.8.2",
+
 
             "guava"                : "com.google.guava:guava:23.0-android",
-
+            //dex 超限制处理框架
             "multidex"             : "com.android.support:multidex:1.0.2",
-
+            //kotlin依赖配置
             "kotlin_config"        : "org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.31",
-
-            //butterknife
-            "butterknife"          : "com.jakewharton:butterknife:${butterknifeVersion}",
-            "butterknife-compiler" : "com.jakewharton:butterknife-compiler:${butterknifeVersion}",
 
             //rxjava rxandroid
             "rx-java"              : "io.reactivex.rxjava2:rxjava:${rxVerison}",
