@@ -1,27 +1,52 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from:"config.gradle"
 
 buildscript {
-    ext.kotlin_version = '1.2.41'
+    ext.kotlin_version = '1.2.31'
+
     repositories {
-        jcenter()
         google()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+        //gradle-retrolambda配置
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        //Arouter自动注册
+        classpath "com.alibaba:arouter-register:1.0.2"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
     }
 }
-
+apply plugin: 'com.alibaba.arouter'
 allprojects {
-    repositories {
-        jcenter()
-        google()
+    allprojects {
+        repositories {
+            google()
+            jcenter()
+            maven {
+                url "https://jitpack.io"
+            }
+        }
     }
-}
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+    subprojects {
+        ext {
+            compileSdkVersion=27
+            buildToolsVersion="27.0.0"
+            minSdkVersion=17
+            appMinSdkVersion=15
+            targetSdkVersion=26
+            supportLibVersion="27.1.1"
+            fastjsonLibVersion="1.1.46.android"
+        }
+    }
+
+//    task clean(type: Delete) {
+//        delete rootProject.buildDir
+//    }
 }
