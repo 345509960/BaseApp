@@ -15,7 +15,7 @@ public class TwoActivity extends AbstractActivity {
 
 
     @Override
-    protected void initView(View view) {
+    public void initView(View view) {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

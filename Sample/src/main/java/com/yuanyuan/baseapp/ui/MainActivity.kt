@@ -8,13 +8,14 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.lyc.love.baselib.router.Router
 import com.lyc.love.baselib.router.RouterBuilder
 import com.lyc.love.baselib.ui.AbstractActivity
 import com.yuanyuan.baseapp.R
 import com.yuanyuan.baseapp.constant.SampleConstant
 
-
+@Route(path = "/main/home")
 class MainActivity : AbstractActivity() {
 
 
@@ -55,6 +56,12 @@ class MainActivity : AbstractActivity() {
         Router.getInstance().navigation(RouterBuilder()
                 .withContext(this)
                 .withUrl(SampleConstant.ROUTER_ACTIONBAR))
+    }
+
+    fun startRv(view: View) {
+        Router.getInstance().navigation(RouterBuilder()
+                .withContext(this)
+                .withUrl("/rv/test"))
     }
 
 

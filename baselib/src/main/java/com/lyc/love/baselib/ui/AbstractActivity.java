@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
@@ -21,10 +22,10 @@ import android.widget.LinearLayout;
 import com.lyc.love.baselib.R;
 
 /**
-    @author lyc
-    create date: 2018/5/7 0007
-    des:基础Activity类
-**/
+ * @author lyc
+ * create date: 2018/5/7 0007
+ * des:基础Activity类
+ **/
 public abstract class AbstractActivity extends AppCompatActivity {
 
     private LinearLayout mRoot;
@@ -33,11 +34,11 @@ public abstract class AbstractActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
 
-    public static final int SERVICE_EXCECTION=-1;
-    public static final int UNNETWORK=-2;
-    public static final int UNDATA=-3;
-    public static final int OK=1;
-    public static final int RUNNING=2;
+    public static final int SERVICE_EXCECTION = -1;
+    public static final int UNNETWORK = -2;
+    public static final int UNDATA = -3;
+    public static final int OK = 1;
+    public static final int RUNNING = 2;
 
 
     private View mView;
@@ -50,7 +51,7 @@ public abstract class AbstractActivity extends AppCompatActivity {
         configUiOption();
         addContentRootView();
         initToolBar();
-        assert mView !=null;
+        assert mView != null;
         initView(mView);
 
     }
@@ -65,41 +66,40 @@ public abstract class AbstractActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.TRANSPARENT);
         }
 
-        if (Build.VERSION.SDK_INT>Build.VERSION_CODES.LOLLIPOP){
-            View decorView=getWindow().getDecorView();
-//            int option=View.SYSTEM_UI_LAYOUT_FLAGS|View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-//            decorView.setSystemUiVisibility(option);
-//            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            View decorView = getWindow().getDecorView();
         }
     }
 
     private void addContentRootView() {
-        mRoot=findViewById(R.id.root);
-        mContent=findViewById(R.id.content);
+        mRoot = findViewById(R.id.root);
+        mContent = findViewById(R.id.content);
         mContent.removeAllViews();
-        mView =LayoutInflater.from(this).inflate(getLayoutId(),mContent,false);
+        mView = LayoutInflater.from(this).inflate(getLayoutId(), mContent, false);
         mContent.addView(mView);
     }
 
-    protected abstract void initView(View view);
+    public void initView(View view) {
+
+    }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId()==android.R.id.home){
-           if (NavUtils.getParentActivityName(this)!=null){
-               NavUtils.navigateUpFromSameTask(this);
-           }else {
-               finish();
-           }
+        if (item.getItemId() == android.R.id.home) {
+            if (NavUtils.getParentActivityName(this) != null) {
+                NavUtils.navigateUpFromSameTask(this);
+            } else {
+                finish();
+            }
         }
         return super.onOptionsItemSelected(item);
     }
 
     private void initToolBar() {
-        mToolbar =findViewById(R.id.toolbar);
+        mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        if (getSupportActionBar()!=null){
+        if (getSupportActionBar() != null) {
             //默认为null
             getSupportActionBar().setLogo(null);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -108,43 +108,89 @@ public abstract class AbstractActivity extends AppCompatActivity {
         }
     }
 
-    public void setSupportActionBarTitle(String title){
-        if (getSupportActionBar()!=null){
+    public void setSupportActionBarTitle(String title) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(title);
         }
     }
 
-    public void setSupportActionBarLogo(Integer resId){
-        if (getSupportActionBar()!=null){
+    public void setSupportActionBarLogo(Integer resId) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setLogo(resId);
         }
     }
 
     @Deprecated
-    public void setSupportActionBarLogoEmpty(){
-        if (getSupportActionBar()!=null){
+    public void setSupportActionBarLogoEmpty() {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setLogo(null);
         }
     }
 
-    public void setDisplayShowTitleEnabled(boolean show){
-        if (getSupportActionBar()!=null){
+    public void setDisplayShowTitleEnabled(boolean show) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(show);
         }
     }
 
-    public void setDisplayUseLogoEnabled(boolean show){
-        if (getSupportActionBar()!=null){
+    /**
+     * 设置左边图标
+     * 默认不显示左边的图标
+     * @param resId
+     * @param showCloseActivity 控制是否finish
+     */
+    public void setToolbarNavigationIcon(@DrawableRes int resId, boolean showCloseActivity){
+        if (mToolbar!=null&&resId!=-1){
+            mToolbar.setNavigationIcon(resId);
+            if (showCloseActivity){
+                mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        finish();
+                    }
+                });
+            }else {
+                mToolbar.setNavigationOnClickListener(null);
+            }
+        }
+    }
+
+    /**
+     * 设置左边图标 并扩展点击事件
+     * @param resId
+     * @param onClickListener
+     */
+    public void setToolbarNavigationIcon(@DrawableRes int resId,View.OnClickListener onClickListener){
+        if (mToolbar!=null&&resId!=-1){
+            mToolbar.setNavigationIcon(resId);
+            mToolbar.setNavigationOnClickListener(onClickListener);
+
+        }
+    }
+
+    /**
+     * 设置标题栏左侧的字体描述 为空不显示
+     * @param title
+     */
+    public void setToolbarTitle( String title){
+        if (mToolbar!=null){
+            mToolbar.setTitle(title);
+        }
+    }
+
+
+    public void setDisplayUseLogoEnabled(boolean show) {
+        if (getSupportActionBar() != null) {
 
             getSupportActionBar().setDisplayUseLogoEnabled(show);
 
         }
     }
 
-    public void setCustomToolBar(View view){
-        if (mToolbar !=null){
+    public void setCustomToolBar(View view) {
+        if (mToolbar != null) {
             mToolbar.addView(view);
-            if (getSupportActionBar()!=null){
+            if (getSupportActionBar() != null) {
                 getSupportActionBar().setDisplayUseLogoEnabled(false);
                 getSupportActionBar().setDisplayShowTitleEnabled(false);
                 getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -152,30 +198,29 @@ public abstract class AbstractActivity extends AppCompatActivity {
         }
     }
 
-    public void setDisplayHomeAsUpEnabled(boolean show){
-        if (getSupportActionBar()!=null){
+    public void setDisplayHomeAsUpEnabled(boolean show) {
+        if (getSupportActionBar() != null) {
 
             getSupportActionBar().setDisplayHomeAsUpEnabled(show);
 
         }
     }
 
-    public void setSupportActionBarBackgroundDrawable(@ColorRes int color){
-        if (getSupportActionBar()!=null){
-            ColorDrawable colorDrawable=new ColorDrawable(ContextCompat.getColor(this,color));
+    public void setSupportActionBarBackgroundDrawable(@ColorRes int color) {
+        if (getSupportActionBar() != null) {
+            ColorDrawable colorDrawable = new ColorDrawable(ContextCompat.getColor(this, color));
             getSupportActionBar().setBackgroundDrawable(colorDrawable);
         }
     }
 
 
-    public void setStatusBarColor(@ColorRes int color){
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
-            getWindow().setStatusBarColor(ContextCompat.getColor(this,color));
-        }else if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
-            mRoot.setBackgroundColor(ContextCompat.getColor(this,color));
+    public void setStatusBarColor(@ColorRes int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(ContextCompat.getColor(this, color));
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            mRoot.setBackgroundColor(ContextCompat.getColor(this, color));
         }
     }
-
 
 
     protected abstract int getLayoutId();

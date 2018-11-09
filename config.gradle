@@ -70,9 +70,9 @@ ext {
 
 
             "guava"                : "com.google.guava:guava:23.0-android",
-            //dex 超限制处理框架
+            //Dex 超限制处理框架
             "multidex"             : "com.android.support:multidex:1.0.2",
-            //kotlin依赖配置
+            //Kotlin 标准库
             "kotlin_config"        : "org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.31",
 
             //rxjava rxandroid

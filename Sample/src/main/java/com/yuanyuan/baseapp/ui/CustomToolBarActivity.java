@@ -18,7 +18,7 @@ public class CustomToolBarActivity extends AbstractActivity {
 
 
     @Override
-    protected void initView(View view) {
+    public void initView(View view) {
         RelativeLayout toolBar= (RelativeLayout) LayoutInflater.from(this).inflate(R.layout.toolbar_custom,getToolbar(),false);
         TextView textView=toolBar.findViewById(R.id.tv_title);
         textView.setText("我的自定制的标题栏");

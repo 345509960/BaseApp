@@ -2,7 +2,9 @@ package com.lyc.love.baselib;
 
 import android.app.Application;
 
+import com.blankj.utilcode.util.Utils;
 import com.lyc.love.baselib.router.Router;
+
 
 public class BaseApplication extends Application {
 
@@ -13,6 +15,7 @@ public class BaseApplication extends Application {
     }
 
     private void initBaseConfig() {
+        Utils.init(this);
         Router.getInstance().init(this);
     }
 

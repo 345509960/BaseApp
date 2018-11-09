@@ -18,104 +18,114 @@ public class RouterBuilder {
 
     protected RouterBuilder mRouterBuilder;
 
-    public RouterBuilder withContext(Context context){
-        this.mContext=context;
+    public RouterBuilder withContext(Context context) {
+        this.mContext = context;
         return this;
     }
 
-    public RouterBuilder withUrl(String url){
-        this.mUrl=url;
+    public RouterBuilder withUrl(String url) {
+        this.mUrl = url;
         return this;
     }
 
 
-    public RouterBuilder withBundle(Bundle bundle){
-        this.mBundle=bundle;
+    public RouterBuilder withBundle(Bundle bundle) {
+        this.mBundle = bundle;
         return this;
     }
 
-    public RouterBuilder withInteger(String key ,Integer value){
+    public RouterBuilder withInteger(String key, Integer value) {
         checkBundleNotNull();
-        this.mBundle.putInt(key,value);
+        this.mBundle.putInt(key, value);
         return this;
     }
 
-    public RouterBuilder withByte(String key ,Byte value){
+    public RouterBuilder withByte(String key, Byte value) {
         checkBundleNotNull();
-        this.mBundle.putByte(key,value);
+        this.mBundle.putByte(key, value);
         return this;
     }
 
-    public RouterBuilder withByteArray(String key ,byte[] value){
+    public RouterBuilder withByteArray(String key, byte[] value) {
         checkBundleNotNull();
-        this.mBundle.putByteArray(key,value);
+        this.mBundle.putByteArray(key, value);
         return this;
     }
 
-    public RouterBuilder withDouble(String key ,Double value){
+    public RouterBuilder withDouble(String key, Double value) {
         checkBundleNotNull();
-        this.mBundle.putDouble(key,value);
+        this.mBundle.putDouble(key, value);
         return this;
     }
 
-    public RouterBuilder withFloat(String key ,Float value){
+    public RouterBuilder withFloat(String key, Float value) {
         checkBundleNotNull();
-        this.mBundle.putFloat(key,value);
+        this.mBundle.putFloat(key, value);
         return this;
     }
 
-    public RouterBuilder withParcelable(String key ,Parcelable value){
+    public RouterBuilder withParcelable(String key, Parcelable value) {
         checkBundleNotNull();
-        this.mBundle.putParcelable(key,value);
+        this.mBundle.putParcelable(key, value);
         return this;
     }
 
-    public RouterBuilder withParcelableArrayList(String key , ArrayList<? extends Parcelable> value){
+    public RouterBuilder withParcelableArrayList(String key, ArrayList<? extends Parcelable> value) {
         checkBundleNotNull();
-        this.mBundle.putParcelableArrayList(key,value);
+        this.mBundle.putParcelableArrayList(key, value);
         return this;
     }
 
-    public RouterBuilder withSerializable(String key ,Serializable value){
+    public RouterBuilder withSerializable(String key, Serializable value) {
         checkBundleNotNull();
-        this.mBundle.putSerializable(key,value);
+        this.mBundle.putSerializable(key, value);
         return this;
     }
-    public RouterBuilder withChar(String key ,char value){
+
+    public RouterBuilder withChar(String key, char value) {
         checkBundleNotNull();
-        this.mBundle.putChar(key,value);
+        this.mBundle.putChar(key, value);
         return this;
     }
-    public RouterBuilder withCharSequence(String key ,CharSequence value){
+
+    public RouterBuilder withCharSequence(String key, CharSequence value) {
         checkBundleNotNull();
-        this.mBundle.putCharSequence(key,value);
+        this.mBundle.putCharSequence(key, value);
         return this;
     }
-    public RouterBuilder withString(String key ,String value){
+
+    public RouterBuilder withString(String key, String value) {
         checkBundleNotNull();
-        this.mBundle.putString(key,value);
+        this.mBundle.putString(key, value);
         return this;
     }
-    public RouterBuilder withString(String key ,ArrayList<String> value){
+
+    public RouterBuilder withObject(String key, String value) {
         checkBundleNotNull();
-        this.mBundle.putStringArrayList(key,value);
+        this.mBundle.putString(key, value);
+        return this;
+    }
+
+    public RouterBuilder withString(String key, ArrayList<String> value) {
+        checkBundleNotNull();
+        this.mBundle.putStringArrayList(key, value);
         return this;
     }
 
     private void checkBundleNotNull() {
-        if (this.mBundle==null){
-            this.mBundle=new Bundle();
+        if (this.mBundle == null) {
+            this.mBundle = new Bundle();
         }
     }
 
 
-    public RouterBuilder withRequestCode(int rquestCode){
-        this.mRequestCode=rquestCode;
+    public RouterBuilder withRequestCode(int rquestCode) {
+        this.mRequestCode = rquestCode;
         return this;
     }
 
-    public RouterBuilder withFlag(int flag){
-        this.mFlag=flag;
+    public RouterBuilder withFlag(int flag) {
+        this.mFlag = flag;
         return this;
     }
 

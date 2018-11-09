@@ -6,7 +6,6 @@
     <color name="colorAccent">#FF4081</color>
 
 
-
     <!--
            目录
        1.色系
@@ -28,5 +27,13 @@
     <color name="transparent">#00000000</color>
     <!-- 七大色系结束 -->
 
+
+    <!--RecyclerView.ItemDecoration相关默认配置 Start-->
+
+    <!--SuctionTopDecoration-->
+    <color name="default_suction_top_bg">@color/colorPrimary</color>
+    <color name="default_suction_top_text_color">@color/white</color>
+
+    <!--RecyclerView.ItemDecoration相关默认配置 End-->
 
 </resources>

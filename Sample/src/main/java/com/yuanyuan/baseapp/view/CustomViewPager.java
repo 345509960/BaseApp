@@ -1,6 +1,7 @@
 package com.yuanyuan.baseapp.view;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -37,6 +38,11 @@ public class CustomViewPager extends ViewPager {
 			return super.onInterceptTouchEvent(ev);
 		}
 
+	}
+
+	@Override
+	protected void onDraw(Canvas canvas) {
+		super.onDraw(canvas);
 	}
 
 	public boolean isScrollable() {

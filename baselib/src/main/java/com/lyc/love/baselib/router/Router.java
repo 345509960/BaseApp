@@ -2,6 +2,7 @@ package com.lyc.love.baselib.router;
 
 import android.app.Application;
 
+import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.lyc.love.baselib.BuildConfig;
 
@@ -34,5 +35,10 @@ public class Router implements IRouter {
     @Override
     public void navigation(RouterBuilder routerBuilder) {
         mProxy.navigation(routerBuilder);
+    }
+
+    @Override
+    public void navigation(RouterBuilder routerBuilder,NavigationCallback callback) {
+        mProxy.navigation(routerBuilder,callback);
     }
 }

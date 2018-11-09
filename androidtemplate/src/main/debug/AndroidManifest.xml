@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lyc.template">
+
+
+    <application
+        android:allowBackup="false"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c3b883d7a24b94eca72fa97074970e7d" />
+
+    </application>
+
+</manifest>

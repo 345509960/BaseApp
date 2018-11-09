@@ -28,10 +28,10 @@ public class SearchResultActivity extends AbstractActivity {
     }
 
     @Override
-    protected void initView(View view) {
+    public void initView(View view) {
         mTextView=view.findViewById(R.id.text);
-        String SearchContent = getIntent().getStringExtra(SearchManager.QUERY);
-        mTextView.setText(SearchContent);
+        String searchcontent = getIntent().getStringExtra(SearchManager.QUERY);
+        mTextView.setText(searchcontent);
     }
 
     @Override

@@ -23,4 +23,14 @@
         android:layout_height="wrap_content"
         android:text="自定义ActionBarView"
         android:onClick="startActionBar"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RV测试类"
+        android:onClick="startRv"/>
+
+    <com.yuanyuan.baseapp.view.TestView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

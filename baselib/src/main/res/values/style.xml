@@ -8,7 +8,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
+        <!--<item name="android:listDivider">@drawable/divice_test</item>-->
     </style>
 
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
@@ -46,6 +46,27 @@
     <!--  搜索框的样式-->
     <style name="ToolBar.Widget.SearchView" parent="Base.Widget.AppCompat.SearchView">
         <item name="defaultQueryHint">请输入关键字</item><!--  搜索框提醒Hint-->
+    </style>
+
+    <style name="ThemeSplash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@mipmap/laucher</item>
+        //设置全屏展示
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        //一定要，否则有状态栏显示，不能全屏
+        <item name="windowNoTitle">true</item>
+        //窗口是否半透明
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        //是否有遮盖 解决突显的白色背景问题，直接展示背景图片
+        <item name="android:windowContentOverlay">@null</item>
+        //
+        <item name="android:windowAnimationStyle">@style/PageAnimation</item>
+    </style>
+
+    <style name="PageAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/alpha_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/alpha_out</item>
     </style>
 
 </resources>
