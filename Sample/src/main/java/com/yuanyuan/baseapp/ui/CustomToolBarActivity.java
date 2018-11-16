@@ -18,6 +18,16 @@ public class CustomToolBarActivity extends AbstractActivity {
 
 
     @Override
+    protected void initEvent() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
     public void initView(View view) {
         RelativeLayout toolBar= (RelativeLayout) LayoutInflater.from(this).inflate(R.layout.toolbar_custom,getToolbar(),false);
         TextView textView=toolBar.findViewById(R.id.tv_title);

@@ -73,7 +73,9 @@ public class SuctionTopDecoration<T extends SuctionTopDecoration.SuctionTopDecor
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
         int pos = parent.getChildAdapterPosition(view);
-
+        if (pos==-1){
+            return;
+        }
         String groupId = mDataList.get(pos).getSuctionTopDecorationGroup();
         if (TextUtils.isEmpty(groupId)) {
             return;
@@ -102,7 +104,9 @@ public class SuctionTopDecoration<T extends SuctionTopDecoration.SuctionTopDecor
         for (int i = 0; i < childCount; i++) {
             View view = parent.getChildAt(i);
             int position = parent.getChildAdapterPosition(view);
-
+            if (position==-1){
+                continue;
+            }
             preGroupName = groupName;
             groupName = mDataList.get(position).getSuctionTopDecorationGroup();
             if (TextUtils.isEmpty(groupName) || groupName.equals(preGroupName)) {

@@ -1,6 +1,7 @@
 package com.yuanyuan.baseapp.adapter
 
 import android.content.Context
+import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
 import com.lyc.love.baselib.view.recyclerview.RecyclerAdapter
@@ -21,6 +22,7 @@ class TestAdapter(context: Context, list: ArrayList<TestEntity>?) : RecyclerAdap
     }
 
     override fun onInitView(holder: RecyclerHolder?, `object`: TestEntity?, position: Int) {
+        holder?.setBackgroundColor(R.id.root, Color.RED)
         holder?.setText(R.id.tv_title, `object`?.name)
     }
 }

@@ -28,6 +28,16 @@ public class SearchResultActivity extends AbstractActivity {
     }
 
     @Override
+    protected void initEvent() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
     public void initView(View view) {
         mTextView=view.findViewById(R.id.text);
         String searchcontent = getIntent().getStringExtra(SearchManager.QUERY);

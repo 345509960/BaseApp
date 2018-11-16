@@ -2,21 +2,30 @@ package com.yuanyuan.baseapp.ui
 
 import android.app.SearchManager
 import android.content.Context
-import android.content.Intent
 import android.support.v7.widget.SearchView
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.chipsea.test.xJni
 import com.lyc.love.baselib.router.Router
 import com.lyc.love.baselib.router.RouterBuilder
 import com.lyc.love.baselib.ui.AbstractActivity
 import com.yuanyuan.baseapp.R
 import com.yuanyuan.baseapp.constant.SampleConstant
+import kotlinx.android.synthetic.main.activity_main.*
 
 @Route(path = "/main/home")
 class MainActivity : AbstractActivity() {
+    override fun initEvent() {
+
+    }
+
+    override fun initData() {
+
+        tv.text = xJni().getStr("")
+    }
 
 
     override fun initView(view: View) {
@@ -46,7 +55,7 @@ class MainActivity : AbstractActivity() {
                 .withUrl(SampleConstant.ROUTER_TWO))
     }
 
-    fun startCustom(view: View) {
+    fun startCustom() {
         Router.getInstance().navigation(RouterBuilder()
                 .withContext(this)
                 .withUrl(SampleConstant.ROUTER_CUSTOMTOOL))

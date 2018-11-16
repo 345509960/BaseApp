@@ -30,11 +30,10 @@ abstract class BaseRecyclerViewActivity<T> : AbstractActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initData()
     }
 
 
-    private fun initData() {
+    override fun initData() {
         mList = initList()
         mItemDecorations = initItemDecoration()
         mTRecyclerAdapter = initAdapter()
@@ -51,6 +50,10 @@ abstract class BaseRecyclerViewActivity<T> : AbstractActivity() {
         mTRecyclerAdapter?.setOnItemClickListener { viewHolder, position ->
             onItemClickListener(viewHolder, position)
         }
+        realRv(rv)
+    }
+
+    open fun realRv(rv: RecyclerView?) {
 
     }
 
@@ -68,5 +71,7 @@ abstract class BaseRecyclerViewActivity<T> : AbstractActivity() {
 
     abstract fun initList(): ArrayList<T>
 
+    override fun initEvent() {
 
+    }
 }

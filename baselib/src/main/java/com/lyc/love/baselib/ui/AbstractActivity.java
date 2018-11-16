@@ -53,8 +53,13 @@ public abstract class AbstractActivity extends AppCompatActivity {
         initToolBar();
         assert mView != null;
         initView(mView);
-
+        initData();
+        initEvent();
     }
+
+    protected abstract void initEvent();
+
+    protected abstract void initData();
 
     private void configUiOption() {
 

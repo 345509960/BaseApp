@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/dp_value_10"
+    android:id="@+id/root"
     android:background="@android:color/holo_purple"
     tools:ignore="ResourceName">
 
