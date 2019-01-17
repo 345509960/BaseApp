@@ -3,40 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:ignore="ResourceName">
 
     <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="two activity"
-    android:onClick="start"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="start"
+        android:text="two activity" />
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="startCustom"
-        android:onClick="startCustom"/>
+        android:onClick="startCustom"
+        android:text="startCustom" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义ActionBarView"
-        android:onClick="startActionBar"/>
+        android:onClick="startActionBar"
+        android:text="自定义ActionBarView" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RV测试类"
-        android:onClick="startRv"/>
+        android:onClick="startRv"
+        android:text="RV测试类" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="detectingSystem"
+        android:text="手机检测系统" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="share"
+        android:text="share" />
 
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sssss"/>
+        android:text="sssss" />
 </LinearLayout>

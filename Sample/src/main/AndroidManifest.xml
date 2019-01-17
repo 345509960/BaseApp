@@ -3,18 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yuanyuan.baseapp">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
+        android:hapticFeedbackEnabled="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:hapticFeedbackEnabled="true"
-        tools:replace="android:allowBackup">
+        tools:replace="android:name,android:allowBackup">
         <activity
             android:name="com.lyc.template.LaucherActivity"
             android:theme="@style/ThemeSplash">
@@ -49,7 +57,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.TestRvActivity"></activity>
+        <activity android:name=".ui.TestRvActivity" />
+        <activity android:name=".ui.DetectingSystemActivity" />
+        <activity android:name=".ui.ShareActivity"></activity>
     </application>
 
 </manifest>

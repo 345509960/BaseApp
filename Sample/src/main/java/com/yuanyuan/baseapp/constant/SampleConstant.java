@@ -16,6 +16,8 @@ public class SampleConstant {
 
     public static final String ROUTER_TWO="/sample/two_activity";
 
+    public static final String ROUTER_DETECTING_SYSTYEM="/sample/detecting_systyem";
+
     /**
      * 路由常量区域
      */

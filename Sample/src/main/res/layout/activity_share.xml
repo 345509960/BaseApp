@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".ui.TwoActivity">
+    tools:context="com.yuanyuan.baseapp.ui.ShareActivity">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ActionBar"
-        android:onClick="startActionBar1"/>
+        android:text="点击分享"
+        android:onClick="share"/>
 
-    <TextView
-        android:id="@+id/tv_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本地分享"
+        android:onClick="local_share"/>
 
 </LinearLayout>
